@@ -21,10 +21,14 @@ body {
     text-align: center;
 }
 
-#btn-fight .label {
+#btn-fight .btn {
     display: block;
     font-size: 20px;
     height: 15px;
     padding: 20px;
     text-align: center;
+}
+
+#gallery .thumbnail{
+    height: 240px;
 }

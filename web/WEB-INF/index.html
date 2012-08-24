@@ -15,8 +15,8 @@
 <body>
   <div class = "container">
 
-	<div class = "hero-unit">
-	  <h1>Listing Fight</h1>
+	<div class = "hero-unit" style = "text-align: center;font-family: Calibri;">
+	  <h1>LISTING FIGHT</h1>
 	</div>
 
 	<div id = "content" class = "container">
@@ -24,39 +24,38 @@
 		<ul class = "thumbnails">
 		  <li class = "span2">
 			<div class = "thumbnail">
-			  <img src = "img/album1/thumbs/dark.jpg" alt = "">
+			  <img src = "img/album1/thumbs/house_1.png" alt = "1">
 			</div>
 		  </li>
 		  <li class = "span2">
 			<div class = "thumbnail">
-			  <img src = "img/album1/thumbs/dark.jpg" alt = "">
+			  <img src = "img/album1/thumbs/house_2.png" alt = "2">
 			</div>
 		  </li>
 		  <li class = "span2">
 			<div class = "thumbnail">
-
-			  <img src = "img/album1/thumbs/dark.jpg" alt = "">
+			  <img src = "img/album1/thumbs/house_3.png" alt = "3">
 			</div>
 		  </li>
 		  <li class = "span2">
 			<div class = "thumbnail">
-			  <img src = "img/album1/thumbs/dark.jpg" alt = "">
+			  <img src = "img/album1/thumbs/house_4.png" alt = "4">
 			</div>
 		  </li>
 		  <li class = "span2">
 			<div class = "thumbnail">
-			  <img src = "img/album1/thumbs/dark.jpg" alt = "">
+			  <img src = "img/album1/thumbs/house_5.png" alt = "5">
 			</div>
 		  </li>
 		  <li class = "span2">
 			<div class = "thumbnail">
-			  <img src = "img/album1/thumbs/dark.jpg" alt = "">
+			  <img src = "img/album1/thumbs/house_6.png" alt = "6">
 			</div>
 		  </li>
 		</ul>
 		<div class = "span2 offset10">
 		  <button id = "refresh" class = "btn btn-primary" style = "width: 120px;height: 50px">
-			 Refresh
+			Refresh
 		  </button>
 		</div>
 		<div class = "clearfix"></div>
@@ -65,10 +64,18 @@
 	  <div id = "fight" class = "row-fluid" style = "padding-top: 30px">
 		<div id = "left-player" class = "span4">
 		  <div id = "left-player-image" class = "dropped">
-
 			<div class = "thumbnail">
+			  <div class = "hp-mp">
+				<table class = "table" style = "margin: 0">
+				  <tr>
+					<td>HP:<span id = "hp1">100</span></td>
+					<td>Attack:<span id = "attack1">?</span></td>
+					<td>Defense:<span id = "defense1">?</span></td>
+				  </tr>
+				</table>
+			  </div>
 			  <!--<img src = "img/album1/thumbs/dark.jpg" class = "img-rounded" alt = "">-->
-			  <img src = "http://placehold.it/360x270" alt = "" style = "height: 218px"/>
+			  <img src = "http://placehold.it/360x270" alt = "" style = "height: 300px"/>
 			</div>
 		  </div>
 		  <div class = "score">
@@ -79,7 +86,7 @@
 		<div id = "vs-content" class = "span4">
 		  <div class = "thumbnail">
 			<div id = "vs-message">
-			  <textarea rows = "9" cols = "1" style = "width: 276px;height: 198px"></textarea>
+			  <textarea rows = "9" cols = "1" style = "width: 276px;height: 317px;overflow-y: scroll;"></textarea>
 			</div>
 
 
@@ -90,14 +97,20 @@
 		</div>
 
 		<div id = "right-player" class = "span4">
-		  <div class = "thumbnail">
-			<div id = "right-player-image" class = "dropped">
-
+		  <div id = "right-player-image" class = "dropped">
+			<div class = "thumbnail">
+			  <div class = "hp-mp">
+				<table class = "table" style = "margin: 0">
+				  <tr>
+					<td>HP:<span id = "hp2">100</span></td>
+					<td>Attack:<span id = "attack2">?</span></td>
+					<td>Defense:<span id = "defense2">?</span></td>
+				  </tr>
+				</table>
+			  </div>
 			  <!--<img src = "img/album1/thumbs/dark.jpg" class = "img-rounded" alt = "">-->
-			  <img src = "http://placehold.it/360x270" alt = "" style = "height: 218px"/>
-
+			  <img src = "http://placehold.it/360x270" alt = "" style = "height: 300px"/>
 			</div>
-
 		  </div>
 		  <div class = "score">
 			<a class = "label label-warning">SCORE</a>
@@ -108,46 +121,17 @@
 	  <div id = "listings-info" style = "padding-top: 30px">
 		<table class = "table table-hover">
 		  <thead>
-			<th>#</th>
-			<th>Property Type</th>
-			<th>State</th>
-			<th>Street Name</th>
-			<th>State</th>
-			<th>Suburb</th>
-			<th>Land Size</th>
-			<th>Bathroom</th>
-			<th>bathroom</th>
+		  <th>#</th>
+		  <th>Property Type</th>
+		  <th>State</th>
+		  <th>Street Name</th>
+		  <th>Suburb</th>
+		  <th>Land Size</th>
+		  <th>Bedroom</th>
+		  <th>Bathroom</th>
 		  </tr>
 		  </thead>
 		  <tbody>
-		  <tr>
-			<td>1</td>
-			<td>TB - Monthly</td>
-			<td>01/04/2012</td>
-			<td>Approved</td>
-			<td>Approved</td>
-		  </tr>
-		  <tr>
-			<td>1</td>
-			<td>TB - Monthly</td>
-			<td>01/04/2012</td>
-			<td>Approved</td>
-			<td>Approved</td>
-		  </tr>
-		  <tr>
-			<td>1</td>
-			<td>TB - Monthly</td>
-			<td>01/04/2012</td>
-			<td>Approved</td>
-			<td>Approved</td>
-		  </tr>
-		  <tr>
-			<td>1</td>
-			<td>TB - Monthly</td>
-			<td>01/04/2012</td>
-			<td>Approved</td>
-			<td>Approved</td>
-		  </tr>
 		  </tbody>
 		</table>
 	  </div>
