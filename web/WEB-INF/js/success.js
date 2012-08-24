@@ -9,19 +9,19 @@ $(document).ready(function () {
 
     $("#left-player-image img").droppable({
         drop:function (event, ui) {
-            var order = ui.draggable[0]['alt'];
+            var order = ui.draggable[0]['alt']-1;
             $('#left-player .label').text(cal_stars(props[order]));
             $(this).attr('src', ui.draggable[0]['src']);
-            first_player = props[order - 1];
+            first_player = props[order];
         }
     });
 
     $("#right-player-image img").droppable({
         drop:function (event, ui) {
-            var order = ui.draggable[0]['alt'];
+            var order = ui.draggable[0]['alt'] - 1;
             $('#right-player .label').text(cal_stars(props[order]));
             $(this).attr('src', ui.draggable[0]['src']);
-            second_player = props[order - 1];
+            second_player = props[order];
         }
     });
 
