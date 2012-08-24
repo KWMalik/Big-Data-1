@@ -1,8 +1,9 @@
 var first_player = {};
 var second_player = {};
+var props = [];
+var suburb = "RICHMOND"
+
 $(document).ready(function () {
-    var props = [];
-    var shuffled = [];
 
     $('#gallery img').draggable({
         revert:true
@@ -26,24 +27,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#refresh").click(function () {
-        $('#listings-info table tbody tr').remove();
-        props = getProp(6);
-        shuffled = shuffle();
-        for (var i = 0; i < 6; i++) {
-            $('#listings-info table tbody').append('<tr><td>' +
-                (i + 1) + '</td><td>' +
-                props[i].property_type + '</td><td>' +
-                props[i].state + '</td><td>' +
-                props[i].street_name + '</td><td>' +
-                props[i].suburb + '</td><td>' +
-                props[i].landsize + '</td><td>' +
-                props[i].bedrooms + '</td><td>' +
-                props[i].bathrooms + '</td><td>' +
-                '</td></tr>');
-            $('#img' + (i + 1)).attr('src', 'img/album1/thumbs/house' + shuffled[i] + '.png');
-        }
-    });
+    $("#refresh").click(getPropFromMongo);
 
     $("#refresh").click();
 
@@ -76,3 +60,21 @@ function shuffle() {
     return result;
 }
 
+function updatePropsToUI() {
+    var shuffled = [];
+    $('#listings-info table tbody tr').remove();
+    shuffled = shuffle();
+    for (var i = 0; i < 6; i++) {
+        $('#listings-info table tbody').append('<tr><td>' +
+            (i + 1) + '</td><td>' +
+            props[i].property_type + '</td><td>' +
+            props[i].state + '</td><td>' +
+            props[i].street_name + '</td><td>' +
+            props[i].suburb + '</td><td>' +
+            props[i].landsize + '</td><td>' +
+            props[i].bedrooms + '</td><td>' +
+            props[i].bathrooms + '</td><td>' +
+            '</td></tr>');
+        $('#img' + (i + 1)).attr('src', 'img/album1/thumbs/house' + shuffled[i] + '.png');
+    }
+}

@@ -6,7 +6,21 @@
  * To change this template use File | Settings | File Templates.
  */
 
-
+function getPropFromMongo() {
+    $.ajax({
+        url:"http://10.18.10.20:27080/bigdata/rpdata/_find",
+        dataType: "jsonp",
+        data:{
+            "criteria": '{"suburb":"'+suburb+'"}',
+            "limit": 6
+        },
+        type: "GET",
+        success:function(data){
+            props = data["results"];
+            updatePropsToUI()
+        }
+    })
+}
 
 function getProp(num) {
     var props = [];
