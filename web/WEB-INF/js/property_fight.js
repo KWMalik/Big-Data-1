@@ -12,7 +12,8 @@ function getPropFromMongo() {
         dataType: "jsonp",
         data:{
             "criteria": '{"suburb":"'+suburb+'"}',
-            "limit": 6
+            "limit": 6,
+            "skip": Math.round(Math.random()*30)
         },
         type: "GET",
         success:function(data){
