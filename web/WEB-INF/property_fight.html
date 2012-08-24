@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="js/property_fight.js"></script>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/md5.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <p>HP:</p>
+        </td>
+        <td>
+            <p id="hp1">100</p>
+        </td>
+        <td>
+            <p id="hp2">100</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Attack:</p>
+        </td>
+        <td>
+            <p id="attack1">?</p>
+        </td>
+        <td>
+            <p id="attack2">?</p>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <p>Defense:</p>
+        </td>
+        <td>
+            <p id="defense1">?</p>
+        </td>
+        <td>
+            <p id="defense2">?</p>
+        </td>
+    </tr>
+</table>
+
+<div id="fight_summary">
+    <textarea style="height: 400px;width: 300px;"></textarea>
+</div>
+
+<button onclick=fight_process()>Fight</button>
+<!--<button onclick=getProp(2)>Fight</button>-->
+
+</body>
+</html>
