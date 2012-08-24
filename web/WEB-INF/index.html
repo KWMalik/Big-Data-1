@@ -15,13 +15,19 @@
 <body>
   <div class = "container">
 
-	<div class = "hero-unit" style = "text-align: center;font-family: Calibri;">
+	<div class = "hero-unit" style = "text-align: center;font-family: Calibri;padding: 45px">
 	  <h1>LISTING FIGHT</h1>
+
+	  <div class = "span2 offset8">
+		<button id = "refresh" class = "btn btn-primary" style = "position: absolute;top: 60px;height:40px;">
+		  Refresh
+		</button>
+	  </div>
 	</div>
 
 	<div id = "content" class = "container">
 	  <div id = "gallery">
-	<ul class = "thumbnails">
+		<ul class = "thumbnails">
 		  <li class = "span2">
 			<div class = "thumbnail">
 			  <img src = "img/album1/thumbs/house_1.png" alt = "1">
@@ -53,15 +59,11 @@
 			</div>
 		  </li>
 		</ul>
-		<div class = "span2 offset10">
-		  <button id = "refresh" class = "btn btn-primary" style = "width: 120px;height: 50px">
-			Refresh
-		  </button>
-		</div>
+
 		<div class = "clearfix"></div>
 	  </div>
 
-	  <div id = "fight" class = "row-fluid" style = "padding-top: 30px">
+	  <div id = "fight" class = "row-fluid">
 		<div id = "left-player" class = "span4">
 		  <div id = "left-player-image" class = "dropped">
 			<div class = "thumbnail">
