@@ -17,7 +17,7 @@ function getProp(num) {
 }
 
 function cal_stars(prop) {
-    var star = Math.round(prop.last_sale_price_range_high / 50000) + 1;
+    var star = Math.round(prop.last_sale_price_range_high / 50000);
     return star
 }
 
@@ -110,7 +110,7 @@ function init_fighter(prop1, prop2) {
 
     prop1.md5 = faultylabs.MD5(ori_num1.toString());
     prop1.hp = 100 + cal_stars(prop1);
-    prop1.attack = getNextNum(prop1);
+    prop1.attack = getNextNum(prop1) + Math.round(cal_stars(prop1) / 10);
     prop1.defense = getNextNum(prop1);
     prop1.name = "Left Property";
     $("#attack1").text(prop1.attack)
@@ -118,7 +118,7 @@ function init_fighter(prop1, prop2) {
 
     prop2.md5 = faultylabs.MD5(ori_num2.toString());
     prop2.hp = 100 + cal_stars(prop2);
-    prop2.attack = getNextNum(prop2);
+    prop2.attack = getNextNum(prop2) + Math.round(cal_stars(prop2) / 10);
     prop2.defense = getNextNum(prop2);
     prop2.name = "Right Property";
     $("#attack2").text(prop2.attack)

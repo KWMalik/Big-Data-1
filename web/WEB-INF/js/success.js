@@ -2,6 +2,7 @@ var first_player = {};
 var second_player = {};
 $(document).ready(function () {
     var props = [];
+    var shuffled = [];
 
     $('#gallery img').draggable({
         revert:true
@@ -9,7 +10,7 @@ $(document).ready(function () {
 
     $("#left-player-image img").droppable({
         drop:function (event, ui) {
-            var order = ui.draggable[0]['alt']-1;
+            var order = ui.draggable[0]['alt'] - 1;
             $('#left-player .label').text(cal_stars(props[order]));
             $(this).attr('src', ui.draggable[0]['src']);
             first_player = props[order];
@@ -28,6 +29,7 @@ $(document).ready(function () {
     $("#refresh").click(function () {
         $('#listings-info table tbody tr').remove();
         props = getProp(6);
+        shuffled = shuffle();
         for (var i = 0; i < 6; i++) {
             $('#listings-info table tbody').append('<tr><td>' +
                 (i + 1) + '</td><td>' +
@@ -39,6 +41,7 @@ $(document).ready(function () {
                 props[i].bedrooms + '</td><td>' +
                 props[i].bathrooms + '</td><td>' +
                 '</td></tr>');
+            $('#img' + (i + 1)).attr('src', 'img/album1/thumbs/house' + shuffled[i] + '.png');
         }
     });
 
@@ -57,4 +60,19 @@ $(document).ready(function () {
 //        this.scrollTop = this.scrollHeight;
 //    })
 });
+
+function shuffle() {
+    var keeper = [], result = [];
+    var one, num = 0;
+
+    while (num < 6) {
+        one = Math.round(Math.random() * 5);
+        if (!keeper[one]) {
+            result[num] = one + 1;
+            num++;
+            keeper[one] = true;
+        }
+    }
+    return result;
+}
 
