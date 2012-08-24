@@ -163,7 +163,7 @@ var prop1 = {
     "listing_ids":104608123,
     "valuation_range_low":375001,
     "valuation_range_high":500000
-}
+};
 
 var prop2 = {
     "_id":{
