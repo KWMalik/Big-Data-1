@@ -1,2 +1,7 @@
 .idea/
 UsingIntelliJProgramJavascript.iml
+*.iml
+*.ipr
+*.iws
+.gradle/*
+.DS_Store
